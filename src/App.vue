@@ -1,24 +1,24 @@
 <template>
   <v-app>
+      <router-view> </router-view>
     <v-main>
-      <DaySelector/>
+      <p class="text-center">Main page</p>
+      <scrollBar />
+      <floor />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import DaySelector from './components/DaySelector';
+import scrollBar from "./components/scrollBar";
+import floor from "./components/floor.vue";
 
 export default {
-  name: 'App',
-  
+  name: "App",
 
   components: {
-    DaySelector,
+    scrollBar,
+    floor,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
