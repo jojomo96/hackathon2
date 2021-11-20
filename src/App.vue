@@ -1,19 +1,17 @@
 <template>
   <v-app>
     <v-main>
-      <Login/>
+      <p class="text-center">Main page</p>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Login from './components/Login';
 
 export default {
   name: 'App',
 
   components: {
-    Login
   },
 };
 </script>
