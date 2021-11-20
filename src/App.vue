@@ -6,6 +6,7 @@
       dark
     >
       <div class="d-flex align-center">
+        <router-view></router-view>
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
