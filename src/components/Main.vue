@@ -1,15 +1,19 @@
 <template>
   <v-main>
     <v-container>
-      <v-col>
-        <day-selector />
-        <v-row>
-          <scrollBar />
-          <v-col>
+      <v-row>  
+        <v-col>        
+          <day-selector />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="scrollbar">
+          <scroll-bar />
+        </v-col>
+        <v-col class="floor">
           <floor />
-          </v-col>
-        </v-row>
-      </v-col> 
+        </v-col>
+      </v-row> 
     </v-container>
   </v-main>
 </template>
@@ -27,4 +31,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .scrollbar {
+    margin-left: -130px;
+    margin-top: 150px;
+    width:50%;
+    padding: 10px;
+  }
+  .floor {
+    margin-left: -1000px;
+  }
+</style>
 
