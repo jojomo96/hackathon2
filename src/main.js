@@ -7,8 +7,6 @@ import Routes from './routes'
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
-Vue.use(VueRouter);
-
 const router = new VueRouter({
   routes: Routes
 });
