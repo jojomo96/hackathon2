@@ -8,17 +8,5 @@
 export default {
   
   name: "App",
-  
-  components: {
-    scrollBar,
-    floor,
-  },
-
-  methods: {
-    changeDisplay() {
-      console.log("test")
-      avatarSet=!avatarSet
-    },
-  }
 };
 </script>
