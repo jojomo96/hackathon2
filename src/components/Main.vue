@@ -1,8 +1,16 @@
 <template>
   <v-main>
-    <day-selector />
-    <scrollBar />
-    <floor />
+    <v-container>
+      <v-col>
+        <day-selector />
+        <v-row>
+          <scrollBar />
+          <v-col>
+          <floor />
+          </v-col>
+        </v-row>
+      </v-col> 
+    </v-container>
   </v-main>
 </template>
 
