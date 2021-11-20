@@ -52,6 +52,7 @@ export default {
       data: () => ({
     valid: true,
     showPassword: false,
+
     required: [
       v => !!v || 'Field is required',
     ],

@@ -2,15 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import VueRouter from 'vue-router'
-import Routes from './routes'
+import Login from './components/Login.vue'
 
 Vue.config.productionTip = false
 
-Vue.use(VueRouter);
-const router = new VueRouter({
-  routes: Routes
-});
+const routes = [ { path: '/login', component: Login }]
 
+const router = new VueRouter({
+  routes
+});
+Vue.use(VueRouter);
 new Vue({
   vuetify,
   render: h => h(App),
