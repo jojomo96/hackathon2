@@ -1,12 +1,9 @@
 <template>
   <v-app>
-
     <v-main>
-    <p class="text-center">Main page</p>
+      <p class="text-center">Main page</p>
       <scrollBar />
       <floor />
-      
-
     </v-main>
   </v-app>
 </template>
