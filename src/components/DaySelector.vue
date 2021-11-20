@@ -11,7 +11,7 @@
               @click="onDaySelected"
               class="zoom"
             >
-              <v-text>{{ day }}</v-text>
+              <label>{{ day }}</label>
             </v-btn>
           </v-btn-toggle>
         </v-row>

@@ -41,6 +41,8 @@
 export default {
   name: "Login",
   data: () => ({
+    password: "",
+    name: "",
     valid: true,
     showPassword: false,
 
