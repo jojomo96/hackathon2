@@ -1,8 +1,8 @@
 <template>
   <v-app>
-      <router-view> </router-view>
+    <router-view> </router-view>
     <v-main>
-      <p class="text-center">Main page</p>
+      <day-selector />
       <scrollBar />
       <floor />
     </v-main>
@@ -12,6 +12,7 @@
 <script>
 import scrollBar from "./components/scrollBar";
 import floor from "./components/floor.vue";
+import daySelector from "./components/DaySelector.vue";
 
 export default {
   name: "App",
@@ -19,6 +20,7 @@ export default {
   components: {
     scrollBar,
     floor,
+    daySelector,
   },
 };
 </script>
