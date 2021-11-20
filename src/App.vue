@@ -1,5 +1,6 @@
 <template>
   <v-app>
+<<<<<<< HEAD
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
@@ -36,24 +37,30 @@
     <v-main>
       <scrollBar />
       <floor />
+=======
+    <v-main>
+      <p class="text-center">Main page</p>
+>>>>>>> ec3f00cf7aac6172ce41c38a6cfea03e3ab594b9
     </v-main>
   </v-app>
 </template>
 
 <script>
+<<<<<<< HEAD
 import scrollBar from "./components/scrollBar";
 import floor from "./components/floor.vue";
+=======
+>>>>>>> ec3f00cf7aac6172ce41c38a6cfea03e3ab594b9
 
 export default {
   name: "App",
 
   components: {
+<<<<<<< HEAD
     scrollBar,
     floor,
+=======
+>>>>>>> ec3f00cf7aac6172ce41c38a6cfea03e3ab594b9
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
