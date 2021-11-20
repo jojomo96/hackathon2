@@ -61,6 +61,9 @@ export default {
   methods: {
     validate () {
       this.$refs.form.validate()
+
+     this.$router.push({ name: '/scrollBar' })
+
     }
   },
 }
