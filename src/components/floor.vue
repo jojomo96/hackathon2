@@ -8,8 +8,8 @@
   <rect x="89.106" y="78.005" width="364.713" height="169.331" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
   <rect x="121.078" y="109.568" width="55.655" height="43.221" style="fill: rgb(198, 12, 12);"/>
   <circle style="fill: none;" cx="135.287" cy="123.002" r="19.331"/>
-  <image x="137.063" y="121.226" v-if="etage !== i || avatarId!==0" href="../assets/default_avatar.png" @click="changeDisplay(0, i)" width="26.051" height="23.091"/>
-  <image x="137.063" y="121.226" v-if="avatarId===0 && etage === i" href="../assets/user_avatar.png" @click="changeDisplay(0, i)" width="26.051" height="23.091"/>
+  <image x="137.063" y="121.226" v-if="!isUserSelected(0, i)" href="../assets/default_avatar.png" @click="changeDisplay(0, i)" width="26.051" height="23.091"/>
+  <image x="137.063" y="121.226" v-if="isUserSelected(0, i)" href="../assets/user_avatar.png" @click="changeDisplay(0, i)" width="26.051" height="23.091"/>
 </svg>
           </div>
         </v-row>
@@ -41,20 +41,36 @@ export default {
     max: 3,
     model: 3,
     colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
-    avatarId:-1,
-    etage:-1,
-    wochentag: new Date()
-    
+    wochentag: new Date(),
+    wochenBuchMap: {
+      1: [-1, -1],
+      2: [-1, -1],
+      3: [-1, -1],
+      4: [-1, -1],
+      5: [-1, -1],
+      6: [-1, -1],
+      0: [-1, -1],
+    }
   }),
 
    methods: {
+
+    isUserSelected(id, tempEtage) {
+      const tuple = this.wochenBuchMap[this.wochentag.getDay()]
+      const avatarId = tuple[0]
+      const etage = tuple[1]
+      return avatarId == id && etage == tempEtage
+    },
+
     changeDisplay(index, tempEtage) {
-      if(this.avatarId === index && this.etage === tempEtage){
-        this.avatarId = -1
-        this.etage = -1
+      const tuple = this.wochenBuchMap[this.wochentag.getDay()]
+      const avatarId = tuple[0]
+      const etage = tuple[1]
+      // console.log(" etage: " + etage + " avatarId: " + avatarId + " wochentag: " + JSON.stringify(this.wochenBuchMap))
+      if(avatarId === index && etage === tempEtage){
+        this.wochenBuchMap[this.wochentag.getDay()] = [-1, -1]
       } else {
-        this.avatarId = index
-        this.etage = tempEtage
+        this.wochenBuchMap[this.wochentag.getDay()] = [index, tempEtage]
       }
       
     },
