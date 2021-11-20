@@ -1,5 +1,6 @@
 <template>
   <v-app>
+      <router-view> </router-view>
     <v-main>
       <p class="text-center">Main page</p>
       <scrollBar />
