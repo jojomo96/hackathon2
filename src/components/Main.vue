@@ -13,6 +13,7 @@
         <v-col class="floor">
           <floor />
         </v-col>
+        <v-col> </v-col>
       </v-row>
     </v-container>
   </v-main>
@@ -34,13 +35,9 @@ export default {
 
 <style scoped>
 .scrollbar {
-  margin-left: -130px;
-  margin-top: 150px;
+  margin: auto;
   width: 50%;
   padding: 10px;
-}
-.floor {
-  margin-left: -1000px;
 }
 </style>
 
