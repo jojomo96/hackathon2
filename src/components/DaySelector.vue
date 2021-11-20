@@ -1,6 +1,6 @@
 <template>
   <div id="days">
-    <v-card flat class="py-12">
+    <v-card>
       <v-card-text>
         <v-row align="center" justify="center">
           <v-btn-toggle v-model="selectedDay" mandatory>
