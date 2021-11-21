@@ -50,11 +50,17 @@ export default {
     this.$root.$on("setSlideValue", (command) => {
       if (command == "up") {
         this.fruits = (this.fruits + 1) % 4;
+        console.log(this.fruits);
         this.sendMessage();
       }
 
       if (command == "down") {
-        this.fruits = (this.fruits - 1) % 4;
+        if (this.fruits == 0) {
+          this.fruits = 3;
+        } else {
+          this.fruits = this.fruits - 1;
+        }
+        console.log(this.fruits);
         this.sendMessage();
       }
     });
