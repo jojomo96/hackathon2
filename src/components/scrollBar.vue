@@ -41,7 +41,7 @@ export default {
       max: 3,
       value: 0,
       fruits: 0,
-      ticksLabels: ["Stock 0", "Stock 1", "Stock 2", "Stock 3"],
+      ticksLabels: ["EG", "OG1", "OG2", "OG3"],
       scrollInvoked: 0,
     };
   },

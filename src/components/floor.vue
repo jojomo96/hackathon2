@@ -1,26 +1,125 @@
 <template>
   <v-carousel :show-arrows="false" hide-delimiters vertical v-model="model">
     <v-carousel-item v-for="(color, i) in colors" :key="color">
-      <v-sheet :color="color" height="100%" tile>
+      <v-sheet height="100%" class="test1">
         <v-row class="fill-height" align="center" justify="center">
           <div class="test">
-<svg viewBox="0 0 489 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="16.282" y="23.535" width="457.667" height="206.039" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(196, 194, 188); stroke: rgb(0, 0, 0);"/>
-  <line style="stroke: rgb(0, 0, 0);" x1="17.252150192743535" y1="83.43193795159218" x2="475.51145472763676" y2="82.24782348809745"/>
-  <line style="stroke: rgb(0, 0, 0);" x1="17.252150192743535" y1="174.0180947121488" x2="474.91939749588937" y2="173.42601489486577"/>
-  <line style="stroke: rgb(0, 0, 0);" x1="85.33976513194611" y1="84.02401776887518" x2="85.9318336564613" y2="174.6101971149675"/>
-  <line style="stroke: rgb(0, 0, 0);" x1="396.1745660545652" y1="173.42601489486577" x2="395.5825088228179" y2="83.43193795159218"/>
-  <line style="stroke: rgb(0, 0, 0);" x1="242.2373369045436" y1="83.43193795159218" x2="242.2373369045436" y2="23.63325412368266"/>
-  <line style="stroke: rgb(0, 0, 0);" x1="242.829394136291" y1="174.0180947121488" x2="242.829394136291" y2="229.6723101612198"/>
-  <rect x="35.014" y="103.115" width="31.972" height="50.918" style="fill: rgb(197, 46, 46);"/>
-  <rect x="419.265" y="100.01" width="31.972" height="50.918" style="fill: rgb(197, 46, 46);"/>
-  <rect x="42.711" y="36.659" width="175.844" height="31.38" style="fill: rgb(197, 46, 46);"/>
-  <rect x="270.952" y="35.77" width="175.844" height="31.38" style="fill: rgb(197, 46, 46);"/>
-  <rect x="273.321" y="185.563" width="175.844" height="31.38" style="fill: rgb(197, 46, 46);"/>
-  <rect x="41.823" y="185.563" width="175.844" height="31.38" style="fill: rgb(197, 46, 46);"/>
-  <image x="43.323" y="121.837" width="15.394" height="14.802"  v-if="!isUserSelected(0, i)" href="../assets/default_avatar.png" @click="changeDisplay(0, i)"/>
-  <image x="43.323" y="121.837" width="15.394" height="14.802"  v-if="isUserSelected(0, i)" href="../assets/user_avatar.png" @click="changeDisplay(0, i)"/>
-  <image
+            <svg viewBox="0 0 489 250" xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="16.282"
+                y="23.535"
+                width="457.667"
+                height="206.039"
+                style="
+                  fill-rule: nonzero;
+                  paint-order: stroke;
+                  fill: rgb(196, 194, 188);
+                  stroke: rgb(0, 0, 0);
+                "
+              />
+              <line
+                style="stroke: rgb(0, 0, 0)"
+                x1="17.252150192743535"
+                y1="83.43193795159218"
+                x2="475.51145472763676"
+                y2="82.24782348809745"
+              />
+              <line
+                style="stroke: rgb(0, 0, 0)"
+                x1="17.252150192743535"
+                y1="174.0180947121488"
+                x2="474.91939749588937"
+                y2="173.42601489486577"
+              />
+              <line
+                style="stroke: rgb(0, 0, 0)"
+                x1="85.33976513194611"
+                y1="84.02401776887518"
+                x2="85.9318336564613"
+                y2="174.6101971149675"
+              />
+              <line
+                style="stroke: rgb(0, 0, 0)"
+                x1="396.1745660545652"
+                y1="173.42601489486577"
+                x2="395.5825088228179"
+                y2="83.43193795159218"
+              />
+              <line
+                style="stroke: rgb(0, 0, 0)"
+                x1="242.2373369045436"
+                y1="83.43193795159218"
+                x2="242.2373369045436"
+                y2="23.63325412368266"
+              />
+              <line
+                style="stroke: rgb(0, 0, 0)"
+                x1="242.829394136291"
+                y1="174.0180947121488"
+                x2="242.829394136291"
+                y2="229.6723101612198"
+              />
+              <rect
+                x="35.014"
+                y="103.115"
+                width="31.972"
+                height="50.918"
+                style="fill: rgb(197, 46, 46)"
+              />
+              <rect
+                x="419.265"
+                y="100.01"
+                width="31.972"
+                height="50.918"
+                style="fill: rgb(197, 46, 46)"
+              />
+              <rect
+                x="42.711"
+                y="36.659"
+                width="175.844"
+                height="31.38"
+                style="fill: rgb(197, 46, 46)"
+              />
+              <rect
+                x="270.952"
+                y="35.77"
+                width="175.844"
+                height="31.38"
+                style="fill: rgb(197, 46, 46)"
+              />
+              <rect
+                x="273.321"
+                y="185.563"
+                width="175.844"
+                height="31.38"
+                style="fill: rgb(197, 46, 46)"
+              />
+              <rect
+                x="41.823"
+                y="185.563"
+                width="175.844"
+                height="31.38"
+                style="fill: rgb(197, 46, 46)"
+              />
+              <image
+                x="43.323"
+                y="121.837"
+                width="15.394"
+                height="14.802"
+                v-if="!isUserSelected(0, i)"
+                href="../assets/default_avatar.png"
+                @click="changeDisplay(0, i)"
+              />
+              <image
+                x="43.323"
+                y="121.837"
+                width="15.394"
+                height="14.802"
+                v-if="isUserSelected(0, i)"
+                href="../assets/user_avatar.png"
+                @click="changeDisplay(0, i)"
+              />
+              <image
                 x="75.937"
                 y="45.411"
                 width="15.394"
@@ -123,9 +222,34 @@
                 href="../assets/user_avatar.png"
                 @click="changeDisplay(5, i)"
               />
-  <image x="395.97" y="193.589" width="15.394" height="14.802" style="" v-if="!isUserSelected(6, i)" href="../assets/default_avatar.png" @click="changeDisplay(6, i)"/>
-  <image x="395.97" y="193.589" width="15.394" height="14.802" style="" v-if="isUserSelected(6, i)" href="../assets/user_avatar.png" @click="changeDisplay(6, i)"/>
-  <image x="395.97" y="193.589" width="15.394" height="14.802" v-if="i === 3" href="../assets/hc_user1.png"/>
+              <image
+                x="395.97"
+                y="193.589"
+                width="15.394"
+                height="14.802"
+                style=""
+                v-if="!isUserSelected(6, i)"
+                href="../assets/default_avatar.png"
+                @click="changeDisplay(6, i)"
+              />
+              <image
+                x="395.97"
+                y="193.589"
+                width="15.394"
+                height="14.802"
+                style=""
+                v-if="isUserSelected(6, i)"
+                href="../assets/user_avatar.png"
+                @click="changeDisplay(6, i)"
+              />
+              <image
+                x="395.97"
+                y="193.589"
+                width="15.394"
+                height="14.802"
+                v-if="i === 3"
+                href="../assets/hc_user1.png"
+              />
               <image
                 x="311.937"
                 y="193.405"
@@ -198,6 +322,10 @@
 <style >
 .test {
   display: flex;
+}
+
+.test1 {
+  background-color: transparent !important;
 }
 </style>
 
