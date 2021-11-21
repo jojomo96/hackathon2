@@ -86,27 +86,39 @@ export default {
     max: 3,
     model: 3,
     colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
-    avatarId:-1,
-    etage:-1,
+    wochenBuchMap: {
+      0: [-1, -1],
+      1: [-1, -1],
+      2: [-1, -1],
+      3: [-1, -1],
+      4: [-1, -1],
+      5: [-1, -1],
+      6: [-1, -1]
+    },
     wochentag: new Date()
     
   }),
 
    methods: {
     changeDisplay(index, tempEtage) {
-      const tuple = this.wochenBuchMap[this.wochentag.getDay()]
+      const day = this.wochentag.getDay()
+      const tuple = this.wochenBuchMap[day]
       const avatarId = tuple[0]
       const etage = tuple[1]
-      console.log("von: " + JSON.stringify(this.wochenBuchMap))
       if(avatarId === index && etage === tempEtage){
-        this.wochenBuchMap[this.wochentag.getDay()] = [-1, -1]
+        this.wochenBuchMap[day] = [-1, -1]
       } else {
-        this.avatarId = index
-        this.etage = tempEtage
+        this.wochenBuchMap[day] = [index, tempEtage]
       }
-      console.log("zu: " + JSON.stringify(this.wochenBuchMap))
       
     },
+
+    isUserSelected(index, tempEtage) {
+          const tuple = this.wochenBuchMap[this.wochentag.getDay()]
+          const avatarId = tuple[0]
+          const etage = tuple[1]
+          return avatarId == index && etage === tempEtage
+    }
   },
 };
 </script>
