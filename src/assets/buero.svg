@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="16.874" y="23.535" width="457.667" height="206.039" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(196, 194, 188); stroke: rgb(0, 0, 0);"/>
+  <rect x="16.282" y="23.535" width="457.667" height="206.039" style="fill-rule: nonzero; paint-order: stroke; fill: rgb(196, 194, 188); stroke: rgb(0, 0, 0);"/>
   <line style="stroke: rgb(0, 0, 0);" x1="17.252150192743535" y1="83.43193795159218" x2="475.51145472763676" y2="82.24782348809745"/>
   <line style="stroke: rgb(0, 0, 0);" x1="17.252150192743535" y1="174.0180947121488" x2="474.91939749588937" y2="173.42601489486577"/>
   <line style="stroke: rgb(0, 0, 0);" x1="85.33976513194611" y1="84.02401776887518" x2="85.9318336564613" y2="174.6101971149675"/>
@@ -13,14 +13,14 @@
   <rect x="270.952" y="35.77" width="175.844" height="31.38" style="fill: rgb(197, 46, 46);"/>
   <rect x="273.321" y="185.563" width="175.844" height="31.38" style="fill: rgb(197, 46, 46);"/>
   <rect x="41.823" y="185.563" width="175.844" height="31.38" style="fill: rgb(197, 46, 46);"/>
-  <circle style="" cx="172.216" cy="51.493" r="8.067"/>
-  <circle style="" cx="90.28" cy="52.381" r="8.067"/>
-  <circle style="" cx="50.835" cy="128.166" r="8.067"/>
-  <circle style="" cx="435.679" cy="125.206" r="8.067"/>
-  <circle style="" cx="316.568" cy="51.197" r="8.067"/>
-  <circle style="" cx="398.497" cy="50.605" r="8.067"/>
-  <circle style="" cx="404.549" cy="200.582" r="8.067"/>
-  <circle style="" cx="321.883" cy="200.398" r="8.067"/>
-  <circle style="" cx="178.682" cy="200.622" r="8.067"/>
-  <circle style="" cx="90.504" cy="200.398" r="8.067"/>
+  <rect x="43.323" y="121.837" width="15.394" height="14.802" style=""/>
+  <rect x="75.937" y="45.411" width="15.394" height="14.802" style=""/>
+  <rect x="170.379" y="44.581" width="15.394" height="14.802" style=""/>
+  <rect x="307.951" y="43.796" width="15.394" height="14.802" style=""/>
+  <rect x="393.01" y="43.388" width="15.394" height="14.802" style=""/>
+  <rect x="427.429" y="118.397" width="15.394" height="14.802" style=""/>
+  <rect x="395.97" y="193.589" width="15.394" height="14.802" style=""/>
+  <rect x="311.937" y="193.405" width="15.394" height="14.802" style=""/>
+  <rect x="162.736" y="193.589" width="15.394" height="14.802" style=""/>
+  <rect x="75.478" y="193.405" width="15.394" height="14.802" style=""/>
 </svg>
