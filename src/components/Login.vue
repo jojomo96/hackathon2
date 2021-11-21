@@ -12,6 +12,7 @@
           ></v-text-field>
           <v-text-field
             label="Password"
+            background-color="rgb(84, 104, 115)"
             v-model="password"
             :type="showPassword ? 'text' : 'password'"
             @click:append="showPassword = !showPassword"
@@ -23,7 +24,7 @@
           <v-card-actions class="justify-center">
             <v-btn
               :disabled="!valid"
-              color="success"
+              color="rgb(197, 46, 46)"
               class="mr-4"
               @click="validate"
             >
@@ -60,4 +61,7 @@ export default {
 </script>
 
 <style scoped>
+.v-card {
+  margin-top: 15%;
+}
 </style>
