@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-card class="test">
+      <v-card>
         <v-card-text>
           <v-slider
             v-model="fruits"
@@ -12,6 +12,7 @@
             tick-size="4"
             vertical
             @change="sendMessage"
+            height="300"
           ></v-slider>
         </v-card-text>
       </v-card>
@@ -21,7 +22,7 @@
 
 <style>
 .test {
-  height: 100%;
+  height: 100% !important;
 }
 .test2 {
   height: 10000px;

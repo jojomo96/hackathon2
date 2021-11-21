@@ -1,22 +1,18 @@
 <template>
   <div id="days">
-    <v-card>
-      <v-card-text>
-        <v-row align="center" justify="center">
-          <v-btn-toggle v-model="selectedDay" mandatory>
-            <v-btn
-              v-for="day in days"
-              :key="day"
-              id="btn1"
-              @click="onDaySelected"
-              class="zoom"
-            >
-              <label>{{ day }}</label>
-            </v-btn>
-          </v-btn-toggle>
-        </v-row>
-      </v-card-text>
-    </v-card>
+    <v-row align="center" justify="center" class="margin">
+      <v-btn-toggle v-model="selectedDay" mandatory>
+        <v-btn
+          v-for="day in days"
+          :key="day"
+          id="btn1"
+          @click="onDaySelected"
+          class="zoom"
+        >
+          <label>{{ day }}</label>
+        </v-btn>
+      </v-btn-toggle>
+    </v-row>
   </div>
 </template>
 
@@ -63,5 +59,8 @@ export default {
   transform: scale(1.2);
   opacity: 100;
   z-index: 99;
+}
+.margin {
+  margin-top: 40px !important;
 }
 </style>
