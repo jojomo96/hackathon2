@@ -24,8 +24,11 @@
 .test {
   height: 100% !important;
 }
-.test2 {
-  height: 10000px;
+.text-center {
+  padding-left: 50%;
+}
+.v-slider--vertical {
+  height: 100%;
 }
 </style>
 
