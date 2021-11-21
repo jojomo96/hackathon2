@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .theme--light {
-  background-image: url("./assets/hintergrund.png") !important;
+  background-image: url("./assets/grey.png") !important;
   background-size: 100%;
 }
 </style>
