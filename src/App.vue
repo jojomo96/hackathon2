@@ -7,6 +7,17 @@
 <script>
 export default {
   name: "App",
+  mounted() {
+    window.addEventListener("keydown", (e) => {
+      if (String.fromCharCode(e.keyCode) == "&") {
+        this.$root.$emit("setSlideValue", "up");
+      }
+
+      if (String.fromCharCode(e.keyCode) == "(") {
+        this.$root.$emit("setSlideValue", "down");
+      }
+    });
+  },
 };
 </script>
 
