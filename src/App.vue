@@ -16,6 +16,16 @@ export default {
       if (String.fromCharCode(e.keyCode) == "(") {
         this.$root.$emit("setSlideValue", "down");
       }
+
+      if (String.fromCharCode(e.keyCode) == "'") {
+        console.log("signal sended");
+        this.$root.$emit("setSelectedDay", "right");
+      }
+      if (String.fromCharCode(e.keyCode) == "%") {
+        console.log("signal sended");
+        this.$root.$emit("setSelectedDay", "left");
+      }
+      console.log(String.fromCharCode(e.keyCode));
     });
   },
 };

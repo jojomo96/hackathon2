@@ -49,29 +49,22 @@ export default {
   mounted() {
     this.$root.$on("setSlideValue", (command) => {
       if (command == "up") {
-        if (this.fruits + 1 <= this.max) {
-          this.fruits = this.fruits + 1;
-          this.sendMessage();
-        }
+        this.fruits = (this.fruits + 1) % 4;
+        this.sendMessage();
       }
 
       if (command == "down") {
-        if (this.fruits - 1 >= 0) {
-          this.fruits = this.fruits - 1;
-          this.sendMessage();
-        }
+        this.fruits = (this.fruits - 1) % 4;
+        this.sendMessage();
       }
-      console.log(command + 1);
     });
   },
 
   methods: {
     sendMessage() {
       this.$root.$emit("doSlide", this.max - this.fruits);
-      console.log(this.fruits);
     },
     setFrutes() {
-      console.log("askldjklasjdl");
       this.fruits = this.fruits + 1;
     },
   },

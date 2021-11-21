@@ -19,6 +19,23 @@
 <script>
 export default {
   name: "DaySelector",
+  mounted() {
+    this.$root.$on("setSelectedDay", (command) => {
+      if (command == "right") {
+        this.selectedDay = this.selectedDay + 1;
+        this.onDaySelected();
+      }
+
+      if (command == "left") {
+        if (this.selectedDay == 0) {
+          this.selectedDay = 6;
+        } else {
+          this.selectedDay = this.selectedDay - 1;
+        }
+        this.onDaySelected();
+      }
+    });
+  },
   methods: {
     onDaySelected() {
       var selectedDate = new Date();
