@@ -31,6 +31,25 @@
 .v-slider--vertical {
   height: 100%;
 }
+.v-slider__ticks-container {
+  background-color: gray;
+}
+
+.v-slider__thumb {
+  background-color: gray !important;
+}
+
+.v-application {
+  background-color: gray !important;
+}
+
+.primary {
+  background-color: gray !important;
+}
+
+.v-slider__tick-label {
+  padding-left: 10px;
+}
 </style>
 
 <script>
